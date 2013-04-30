@@ -1252,6 +1252,7 @@ form div {
 	margin: 0 auto;
 	max-width: 960px;
 	padding: 0px 25px;
+	background-color:white;
 }
 
 #wrapper {
@@ -1261,7 +1262,7 @@ form div {
 	border: 1px solid #e5e5e5;
 	border-radius: 4px;
 	clear: both;
-	/* margin: 20px auto 20px auto; */
+	margin: 20px auto 20px auto;
 	padding: 0 20px 20px 20px;
 	position: relative;
 }
@@ -1269,6 +1270,7 @@ form div {
 .front-page #wrapper {
 	background-color: transparent;
 	border: none;
+	margin: 0px auto 20px auto; 
 	/* margin: 20px auto 20px auto; */
 	padding: 0;
 }
@@ -1911,10 +1913,13 @@ ul.menu > li:hover {
 	display: none;
 }
 
+.main-nav {
+	float:right;
+	margin:30px 30px 0px;
+}
 .main-nav #responsive_current_menu_item {
 	display: none;
 }
-
 /* =Primary Main Menu IE Fixes
 -------------------------------------------------------------- */
 .ie7 .menu ul {
@@ -2820,12 +2825,14 @@ BDO[DIR="rtl"] {
 
 /* =Responsive (Mobile) Design
 -------------------------------------------------------------- */
-@media screen and (max-width: 980px) {
+
+/* @media screen and (max-width: 980px) {
 
 	body {}
 
 	.grid, 
-	.grid-right {
+	.grid-right, 
+	.main-nav {
 		float: none;
 	}
 
@@ -2856,7 +2863,7 @@ BDO[DIR="rtl"] {
 		display: block;
 	}
 
-}
+}  */
 
 @media screen and (max-width: 650px) {
 
@@ -2869,7 +2876,8 @@ BDO[DIR="rtl"] {
 	}
 
 	.grid, 
-	.grid-right {
+	.grid-right, 
+	.main-nav  {
 		float: none;
 	}
 
@@ -3065,7 +3073,8 @@ BDO[DIR="rtl"] {
 	}
 
 	.grid, 
-	.grid-right {
+	.grid-right, 
+	.main-nav  {
 		float: none;
 	}
 	

@@ -55,7 +55,7 @@ global $more; $more = 0;
 		<?php 
 		endwhile; 
 
-		get_template_part( 'loop-nav' ); 
+		get_template_part( 'loop-nav' );  
 
 	else : 
 
