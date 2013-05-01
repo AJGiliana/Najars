@@ -1251,7 +1251,7 @@ form div {
 #container {
 	margin: 0 auto;
 	max-width: 960px;
-	padding: 0px 25px;
+	padding: 0px 25px 0px 25px;
 	background-color:white;
 }
 
