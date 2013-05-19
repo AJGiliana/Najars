@@ -15,3 +15,15 @@ require ( get_template_directory() . '/includes/post-custom-meta.php' );
 require ( get_template_directory() . '/includes/tha-theme-hooks.php' );
 require ( get_template_directory() . '/includes/hooks.php' );
 require ( get_template_directory() . '/includes/version.php' );
+
+function add_flexslider(){
+	if (!is_admin() && (is_page_template('home-slider-page.php') || is_single())){
+		wp_register_script('flexslider', get_template_directory_uri().'/flexslider/jquery.flexslider-min.js', array('jquery'), '1.0', false);
+		wp_enqueue_script('flexslider');
+					
+		wp_register_style('flexslider-style', get_template_directory_uri().'/flexslider/flexslider.css');
+		wp_enqueue_style('flexslider-style');
+	}
+}
+add_action('wp_head', 'add_flexslider');
+

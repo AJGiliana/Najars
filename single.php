@@ -35,6 +35,39 @@ get_header(); ?>
                 <?php get_template_part( 'post-meta' ); ?>
 
                 <div class="post-entry">
+					<div class="flexslider">
+						<ul class="slides">
+
+<?php $upload_dir = wp_upload_dir();  //['path'],['baseurl']
+$slug = $post->post_name;
+		
+if ($handle = opendir($upload_dir['path'])) {
+    while (false !== ($entry = readdir($handle))) {	
+		//$pattern = '/'.$slug.'\d+/';
+		$pattern = '/'.$slug.'\d((?!-))/';
+		//$pattern = '/hello-world\d((?!-))/';
+		if(preg_match($pattern, $entry, $matches, PREG_OFFSET_CAPTURE, 0)){
+			//echo '<li>
+			
+			$file = $matches[0][0].'.jpg';
+			$file_thumb = $matches[0][0].'-thumb.jpg';
+			
+			if(!file_exists($file_thumb)){	
+				chdir($upload_dir['path']);
+				copy($file, $file_thumb);
+			}
+			
+			echo '<li data-thumb="'.$upload_dir['baseurl'].'/'.$file_thumb.'">		
+					<img src="'.$upload_dir['baseurl'].'/'.$file.'" />
+				</li>';
+		}
+	}
+    closedir($handle);
+}
+?>						
+						</ul>
+					</div>
+				
                     <?php the_content(__('Read more &#8250;', 'responsive')); ?>
                     
                     <?php if ( get_the_author_meta('description') != '' ) : ?>

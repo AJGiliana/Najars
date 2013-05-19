@@ -33,8 +33,11 @@ $responsive_options = responsive_get_options();
 <div id="footer" class="clearfix">
 	<?php responsive_footer_top(); ?>
 
+	<div id="right"></div>
+	<div id="left"></div>
     <div id="footer-wrapper">
-    
+	
+		
         <div class="grid col-940">
         
         <div class="grid col-540">

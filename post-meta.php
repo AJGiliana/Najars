@@ -21,7 +21,7 @@ if ( !defined('ABSPATH')) exit;
 <h1 class="post-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'responsive'), the_title_attribute('echo=0')); ?>"><?php the_title(); ?></a></h1>
 
 <div class="post-meta">
-<?php responsive_post_meta_data(); ?>
+<?php //responsive_post_meta_data(); ?>
 
 	<?php if ( comments_open() ) : ?>
 		<span class="comments-link">

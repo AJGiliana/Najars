@@ -51,12 +51,12 @@ get_header();
 			<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>    
 				<?php responsive_entry_top(); ?>
                 
-                <?php get_template_part( 'post-meta' ); ?>
+                <?php //get_template_part( 'post-meta' ); ?>
                 
                 <div class="post-entry">
-                    <?php if ( has_post_thumbnail()) : ?>
+                   <?php if ( has_post_thumbnail()) : ?>
                         <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
-                    <?php the_post_thumbnail(); ?>
+							<?php the_post_thumbnail(array(200,200), array('class' => 'alignleft')); ?>
                         </a>
                     <?php endif; ?>
                     <?php the_excerpt(); ?>

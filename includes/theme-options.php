@@ -271,11 +271,11 @@ function responsive_theme_options_do_page() {
                  * Front Page Override Checkbox
                  */
                 ?>
-                <div class="grid col-300"><?php _e('Enable Custom Front Page', 'responsive'); ?></div><!-- end of .grid col-300 -->
-                    <div class="grid col-620 fit">
+                <div class="grid col-220"><?php _e('Enable Custom Front Page', 'responsive'); ?></div><!-- end of .grid col-220 -->
+                    <div class="grid col-700 fit">
                         <input id="responsive_theme_options[front_page]" name="responsive_theme_options[front_page]" type="checkbox" value="1" <?php checked( '1', $responsive_options['front_page'], true ); ?> />
                         <label class="description" for="responsive_theme_options[home_headline]"><?php printf( __('Overrides the WordPress %1sfront page option%2s', 'responsive'), '<a href="options-reading.php">', '</a>'); ?></label>
-                    </div><!-- end of .grid col-620 -->
+                    </div><!-- end of .grid col-700 -->
                 <?php
                 /**
                  * Homepage Headline
@@ -381,8 +381,8 @@ function responsive_theme_options_do_page() {
                  * Default Single Blog Post Layout
                  */
                 ?>
-                <div class="grid col-300"><?php _e( 'Default Single Blog Post Layout', 'responsive' ); ?></div><!-- end of .grid col-300 -->
-				<div class="grid col-620 fit">
+                <div class="grid col-220"><?php _e( 'Default Single Blog Post Layout', 'responsive' ); ?></div><!-- end of .grid col-220 -->
+				<div class="grid col-700 fit">
 					<?php $valid_options = responsive_get_valid_layouts(); 	?>
 					<select id="responsive_theme_options[single_post_layout_default]" name="responsive_theme_options[single_post_layout_default]">
 					<?php 
@@ -393,15 +393,15 @@ function responsive_theme_options_do_page() {
 					}
 					?>
 					</select>
-				</div><!-- end of .grid col-620 -->
+				</div><!-- end of .grid col-700 -->
                                
                 <?php
                 /**
                  * Default Blog Posts Index Layout
                  */
                 ?>
-                <div class="grid col-300"><?php _e( 'Default Blog Posts Index Layout', 'responsive' ); ?></div><!-- end of .grid col-300 -->
-				<div class="grid col-620 fit">
+                <div class="grid col-220"><?php _e( 'Default Blog Posts Index Layout', 'responsive' ); ?></div><!-- end of .grid col-220 -->
+				<div class="grid col-700 fit">
 					<?php $valid_options = responsive_get_valid_layouts(); 	?>
 					<select id="responsive_theme_options[blog_posts_index_layout_default]" name="responsive_theme_options[blog_posts_index_layout_default]">
 					<?php 
@@ -416,7 +416,7 @@ function responsive_theme_options_do_page() {
 						<?php submit_button( __( 'Save Options', 'responsive' ), 'primary', 'responsive_theme_options[submit]', false ); ?>
 						<?php submit_button( __( 'Restore Defaults', 'responsive' ), 'secondary', 'responsive_theme_options[reset]', false ); ?>
                         </p>
-				</div><!-- end of .grid col-620 -->
+				</div><!-- end of .grid col-700 -->
                                     
                 </div><!-- end of .rwd-block -->
             </div><!-- end of .rwd-container -->

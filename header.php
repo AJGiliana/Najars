@@ -49,13 +49,37 @@ if ( defined( 'WPSEO_VERSION' ) ) {
 <?php wp_enqueue_style('responsive-style', get_stylesheet_uri(), false, '1.9.3');?>
 
 <?php wp_head(); ?>
+	<script>
+		jQuery(function(){
+			 jQuery(window).resize(function() {
+				var winWidth = jQuery(window).width();
+				if(winWidth  > 650){
+					jQuery('ul#menu-main-nav').css({'display':'block'});
+				} else {
+					jQuery('ul#menu-main-nav').css({'display':'none'});
+				}
+			});
+			
+<?php	if (!is_admin() && is_page_template('home-slider-page.php')){ ?>
+			jQuery('.flexslider').flexslider({
+				animation: "slide"
+			});
+<?php } elseif(!is_admin() && is_single()){ ?>
+			jQuery('.flexslider').flexslider({
+				animation: "slide",    
+				controlNav: "thumbnails"
+			});
+<?php } ?>
+
+	});
+	</script>
 </head>
 
 <body <?php body_class(); ?>>
-                 
+            
 <?php responsive_container(); // before container hook ?>
 <div id="container" class="hfeed">
-         
+
     <?php responsive_header(); // before header hook ?>
     <div id="header">
 

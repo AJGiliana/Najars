@@ -32,7 +32,7 @@ endif;
 
 /**
  * Display archive information
- */
+
 if ( is_archive() ) {
 	?>
 	<h6 class="title-archive">
@@ -49,4 +49,4 @@ if ( is_archive() ) {
 		?>
 	</h6>
 	<?php
-}
+} */

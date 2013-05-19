@@ -20,7 +20,7 @@ if ( !defined('ABSPATH')) exit;
 
 <?php if ( ! is_page() && ! is_search() ) { ?>
 
-	<div class="post-data">
+	<!-- <div class="post-data">
 		<?php the_tags(__('Tagged with:', 'responsive') . ' ', ', ', '<br />'); ?> 
 		<?php printf(__('Posted in %s', 'responsive'), get_the_category_list(', ')); ?> 
 	</div><!-- end of .post-data --> 

@@ -37,7 +37,7 @@ get_header(); ?>
                 <div class="post-entry">
                     <?php if ( has_post_thumbnail()) : ?>
                         <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
-                    <?php the_post_thumbnail('thumbnail', array('class' => 'alignleft')); ?>
+							<?php the_post_thumbnail(array(200,200), array('class' => 'alignleft')); ?>
                         </a>
                     <?php endif; ?>
                     <?php the_excerpt(); ?>

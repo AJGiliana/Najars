@@ -125,7 +125,14 @@ html {
 body {
 	-moz-font-smoothing: antialiased;
 	-webkit-font-smoothing: antialiased;
-	background: #efefef;
+	/* background: url("images/blue-bg.jpg") repeat-x scroll 0 0 #405379;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#283756), to(#405379));
+	background-image: -webkit-linear-gradient(top, #283756, #405379);
+	background-image: -moz-linear-gradient(top, #283756, #405379);
+	background-image: -ms-linear-gradient(top, #283756, #405379);
+	background-image: -o-linear-gradient(top, #283756, #405379);
+	background-image: linear-gradient(top, #283756, #405379); */
+    background: url("images/blue-print-1.png") repeat scroll 0 0 #324054;
 	color: #555;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 14px;
@@ -338,8 +345,8 @@ sub {
 img {
 	-ms-interpolation-mode: bicubic;
 	border: 0;
-	height: auto;
-	max-width: 100%;
+	/* height: auto;
+	max-width: 100%; */
 	vertical-align: middle;
 }
 
@@ -1126,7 +1133,7 @@ h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 }
 
 h1 {
-    font-size: 2.625em; /* = 42px */
+    font-size: 2em; /* = 42px */
     margin-bottom: .5em;
     margin-top: .5em;
 }
@@ -1250,23 +1257,22 @@ form div {
 -------------------------------------------------------------- */
 #container {
 	margin: 0 auto;
-	max-width: 960px;
-	padding: 0px 25px 0px 25px;
-	background-color:white;
+	max-width: 960px;   
+	padding: 15px 25px;
+	background: url("images/header-blueprint.gif") no-repeat scroll 0 0 white;
+	box-shadow:1px 1px 33px 16px #333333;
 }
-
 #wrapper {
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	background-color: #fff;
-	border: 1px solid #e5e5e5;
-	border-radius: 4px;
-	clear: both;
+	background-color: #ffffff;
+	border-top: 2px dotted #CCCCCC;
 	margin: 20px auto 20px auto;
-	padding: 0 20px 20px 20px;
-	position: relative;
+    clear: both;
+    padding: 0 0px 20px 20px;
+    position: relative;
 }
-
+.home #wrapper {
+	padding: 0px 0px 20px !important;
+}
 .front-page #wrapper {
 	background-color: transparent;
 	border: none;
@@ -1280,10 +1286,12 @@ form div {
 }
 
 #footer {
+	background-color: #FFFFFF;
 	clear: both;
-	margin: 0 auto;
+	margin: 0 auto 40px;
 	max-width: 960px;
 	padding: 0 25px 0 25px;
+	position:relative;   
 }
 
 #footer-wrapper {
@@ -1291,11 +1299,33 @@ form div {
 	padding: 0;
 }
 
+#footer #right {
+	background: url("images/corners.png") repeat scroll 79px 0 transparent;
+    bottom: -1px;
+    height: 44px;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    width: 78px;
+    z-index: 9;
+}
+
+#footer #left {
+	background: url("images/corners.png") repeat scroll 0 0 transparent;
+    bottom: -1px;
+    height: 44px;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    width: 78px;
+    z-index: 9;
+}
+
 /* =Header
 -------------------------------------------------------------- */
 #logo {
-	float: left;
-	margin: 0;
+	float: left;    
+	margin-bottom: 20px;
 }
 
 .site-name {
@@ -1325,8 +1355,6 @@ form div {
 }
 
 #content-full {
-	margin-top: 40px;
-	margin-bottom: 20px;
 }
 
 #content-blog {
@@ -1723,17 +1751,11 @@ form div {
 
 /* =Header Menu (Primary)
 -------------------------------------------------------------- */
+
 .menu {
-	background-color: #585858;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#585858), to(#3d3d3d));
-	background-image: -webkit-linear-gradient(top, #585858, #3d3d3d);
-	background-image: -moz-linear-gradient(top, #585858, #3d3d3d);
-	background-image: -ms-linear-gradient(top, #585858, #3d3d3d);
-	background-image: -o-linear-gradient(top, #585858, #3d3d3d);
-	background-image: linear-gradient(top, #585858, #3d3d3d);
-	clear: both;
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#585858, endColorstr=#3d3d3d);
-	margin: 0 auto;
+	margin: 0 auto;	
+	clear: both;  
+	display: block;
 }
 
 .menu, 
@@ -1745,13 +1767,22 @@ form div {
 }
 
 .menu li {
-	border: 0;
+	border: 1px dashed #DDDDDD;
 	display: block;
 	float: left;
-	margin: 0;
+	margin: 0 3px;
 	padding: 0;
 	position: relative;
-	z-index: 5;
+	z-index: 5; 
+	background-color: #EEEEEE;
+    background-image: -moz-linear-gradient(center top , #FFFFFF, #EEEEEE);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#EEEEEE));
+	background-image: -webkit-linear-gradient(top, #FFFFFF, #EEEEEE);
+	background-image: -moz-linear-gradient(top, #FFFFFF, #EEEEEE);
+	background-image: -ms-linear-gradient(top, #FFFFFF, #EEEEEE);
+	background-image: -o-linear-gradient(top, #FFFFFF, #EEEEEE);
+	background-image: linear-gradient(top, #FFFFFF, #EEEEEE);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFFFFF, endColorstr=#EEEEEE);
 }
 
 .menu li:hover {
@@ -1814,42 +1845,41 @@ form div {
 	width: auto;
 }
 
-.menu a {
-	border-left: 1px solid #585858;
-	color: #fff;
-	cursor: pointer;
-	display: block;
-	font-size: 13px;
-	font-weight: 700;
-	height: 45px;
-	line-height: 45px;
-	margin: 0;
-	padding: 0 0.9em;
-	position: relative;
-	text-decoration: none;
-	text-shadow: 0 -1px 0 #000;
+.menu a {    
+	color: #336699;
+    cursor: pointer;
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    height: 35px;
+    letter-spacing: 0;
+    line-height: 36px;
+    margin: 0;
+    padding: 0 1.5em;
+    position: relative;
+    text-shadow: 1px -1px 0 #FFFFFF;
+    text-transform: uppercase;
 }
 
-.menu a:hover {
-	background-color: #808080;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#808080), to(#363636));
-	background-image: -webkit-linear-gradient(top, #808080, #363636);
-	background-image: -moz-linear-gradient(top, #808080, #363636);
-	background-image: -ms-linear-gradient(top, #808080, #363636);
-	background-image: -o-linear-gradient(top, #808080, #363636);
-	background-image: linear-gradient(top, #808080, #363636);
-	color: #fff;
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#808080, endColorstr=#363636);
+.menu a:hover {   
+	background-color: #EEEEEE;
+    color: #333333;
 }
 
 ul.menu > li:hover {
-	background-color: #363636;
+	background-color: #EEEEEE;
 	color: #fff;
 }
 
+.menu .current_page_item,
+.menu .current-menu-item {
+	/* border:1px dashed #CCCCCC; */
+	border-left:1px solid #CCCCCC;
+	border-right:1px solid #CCCCCC;
+}
 .menu .current_page_item a,
 .menu .current-menu-item a {
-	background-color: #343434;
+	background-color: #EEEEEE;
 }
 
 .front-page .menu .current_page_item a {
@@ -1862,7 +1892,8 @@ ul.menu > li:hover {
 .menu li li {
 	background: #fff;
 	background-image: none;
-	border: 1px solid #e5e5e5;
+	border: 1px solid #CCCCCC;
+	border-bottom: 1px dashed #CCCCCC !important;
 	color: #444;
 	filter: none;
 	margin: -1px 0 1px 0;
@@ -1915,7 +1946,7 @@ ul.menu > li:hover {
 
 .main-nav {
 	float:right;
-	margin:30px 30px 0px;
+	margin:55px 0px 0px;
 }
 .main-nav #responsive_current_menu_item {
 	display: none;
@@ -1938,7 +1969,7 @@ ul.menu > li:hover {
 }
 
 .sb-holder {
-	background-color: #3d3d3d;
+	background-color: #DDDDDD;
 	display: none;
 	height: 30px;
 	margin: 0 auto;
@@ -2673,7 +2704,8 @@ table.cart td.actions .coupon .input-text {
 -------------------------------------------------------------- */
 #footer {
 	font-size: 11px;
-	line-height: 1.5em;
+	line-height: 1.5em;   
+	border-top: 2px dotted #CCCCCC;
 }
 
 #footer a {
@@ -2695,6 +2727,7 @@ table.cart td.actions .coupon .input-text {
 
 .copyright {
 	text-align: left;
+	margin:0px 0px 0px 19px;
 }
 
 .powered {
@@ -2741,6 +2774,11 @@ table.cart td.actions .coupon .input-text {
 .center {
 	text-align: center;
 }
+
+#tinyform {
+    max-width: 500px !important;
+}
+
 
 /* =Clearfix
 -------------------------------------------------------------- */
@@ -2867,7 +2905,17 @@ BDO[DIR="rtl"] {
 
 @media screen and (max-width: 650px) {
 
-	body {}
+	body {
+		/* background-image: -webkit-gradient(linear, left top, left bottom, from(#283756), to(#405379));
+		background-image: -webkit-linear-gradient(top, #283756, #405379);
+		background-image: -moz-linear-gradient(top, #283756, #405379);
+		background-image: -ms-linear-gradient(top, #283756, #405379);
+		background-image: -o-linear-gradient(top, #283756, #405379);
+		background-image: linear-gradient(top, #283756, #405379) !important;  */
+		
+		background-color: #324054;
+		background-image: none;
+	}
 
 	#logo {
 		float: none;
@@ -2904,15 +2952,16 @@ BDO[DIR="rtl"] {
 	.js .main-nav {
 		position: relative;
 		height: 30px;
-		background-color: #585858;
-		background-image: -webkit-gradient(linear, left top, left bottom, from(#585858), to(#3d3d3d));
-		background-image: -webkit-linear-gradient(top, #585858, #3d3d3d);
-		background-image: -moz-linear-gradient(top, #585858, #3d3d3d);
-		background-image: -ms-linear-gradient(top, #585858, #3d3d3d);
-		background-image: -o-linear-gradient(top, #585858, #3d3d3d);
-		background-image: linear-gradient(top, #585858, #3d3d3d);
+		background-color: #405379;
+		/* 
+		background-image: -webkit-gradient(linear, left top, left bottom, from(#EEEEEE), to(#DDDDDD));
+		background-image: -webkit-linear-gradient(top, #EEEEEE, #DDDDDD);
+		background-image: -moz-linear-gradient(top, #EEEEEE, #DDDDDD);
+		background-image: -ms-linear-gradient(top, #EEEEEE, #DDDDDD);
+		background-image: -o-linear-gradient(top, #EEEEEE, #DDDDDD);
+		background-image: linear-gradient(top, #EEEEEE, #DDDDDD); 
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#EEEEEE, endColorstr=#DDDDDD);*/
 		clear: both;
-		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#585858, endColorstr=#3d3d3d);
 		margin: 0 auto;
 	}
 	
@@ -2955,6 +3004,7 @@ BDO[DIR="rtl"] {
 	
 	.js .main-nav .menu li li:hover {
 		background: none!important;
+		display:none;
 	}
 	
 	.js .main-nav .menu li li a {
@@ -3065,7 +3115,18 @@ BDO[DIR="rtl"] {
 
 @media screen and (max-width: 480px) {
 
-	body {}
+
+	body {
+		/* background-image: -webkit-gradient(linear, left top, left bottom, from(#283756), to(#405379));
+		background-image: -webkit-linear-gradient(top, #283756, #405379);
+		background-image: -moz-linear-gradient(top, #283756, #405379);
+		background-image: -ms-linear-gradient(top, #283756, #405379);
+		background-image: -o-linear-gradient(top, #283756, #405379);
+		background-image: linear-gradient(top, #283756, #405379) !important;  */
+		
+		background-color: #324054;
+		background-image: none;
+	}
 
 	#logo {
 		float: none;
@@ -3127,8 +3188,18 @@ BDO[DIR="rtl"] {
 
 @media screen and (max-width: 320px) {
 	
-	body {}
-	
+
+	body {
+		/* background-image: -webkit-gradient(linear, left top, left bottom, from(#283756), to(#405379));
+		background-image: -webkit-linear-gradient(top, #283756, #405379);
+		background-image: -moz-linear-gradient(top, #283756, #405379);
+		background-image: -ms-linear-gradient(top, #283756, #405379);
+		background-image: -o-linear-gradient(top, #283756, #405379);
+		background-image: linear-gradient(top, #283756, #405379) !important;  */
+		
+		background-color: #324054;
+		background-image: none;
+	}
 	#featured p {
 		font-size: 12px;
 		line-height: 1.5em;
@@ -3158,7 +3229,18 @@ BDO[DIR="rtl"] {
 
 @media screen and (max-width: 240px) {
 	
-	body {}
+	
+
+	body {
+		/* background-image: -webkit-gradient(linear, left top, left bottom, from(#283756), to(#405379));
+		background-image: -webkit-linear-gradient(top, #283756, #405379);
+		background-image: -moz-linear-gradient(top, #283756, #405379);
+		background-image: -ms-linear-gradient(top, #283756, #405379);
+		background-image: -o-linear-gradient(top, #283756, #405379);
+		background-image: linear-gradient(top, #283756, #405379) !important;  */
+		background-color: #324054;
+		background-image: none;
+	}
 	
 	#featured p {
 		font-size: 11px;
